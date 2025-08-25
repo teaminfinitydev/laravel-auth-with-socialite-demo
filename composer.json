@@ -10,8 +10,11 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "jackiedo/dotenv-editor": "^1.1",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/socialite": "^5.23",
+        "laravel/tinker": "^2.10.1",
+        "laravel/ui": "^4.6"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -31,6 +34,9 @@
         }
     },
     "autoload-dev": {
+        "files": [
+            "app/Helper.php"
+        ],
         "psr-4": {
             "Tests\\": "tests/"
         }
