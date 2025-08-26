@@ -19,7 +19,7 @@ Route::get('/auth/callback/{provider}', function ($provider) {
     $socialUser = Socialite::driver($provider)->stateless()->setHttpClient(new \GuzzleHttp\Client([
         'verify' => filter_var(get_web_config_env_data('SSL_VERIFY'), FILTER_VALIDATE_BOOLEAN) ?? false,
     ]))->user();
-    $ApiToken = User::genAPIToken();
+
 
     // Find or create the user
     $user = User::firstOrCreate(
